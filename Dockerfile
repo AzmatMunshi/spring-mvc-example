@@ -1,4 +1,10 @@
+FROM maven:3.5-jdk-8 as BUILD
+COPY src /usr/src/spring-mvc-example/src/main
+COPY pom.xml /usr/src/spring-mvc-example
+RUN mvn -f /usr/src/spring-mvc-example/pom.xml clean package
+
+
 FROM jboss/wildfly
-ADD spring-mvc-example.war /opt/jboss/wildfly/standalone/deployments/
-RUN /opt/jboss/wildfly/bin/add-user.sh admin admin --silent
-CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0"]
+COPY --from=BUILD /usr/src/spring-mvc-example/target/spring-mvc-example.war /opt/jboss/wildfly/standalone/deployments/spring-mvc-example.war
+
+
