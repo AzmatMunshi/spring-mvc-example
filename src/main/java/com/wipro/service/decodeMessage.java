@@ -4,7 +4,7 @@ import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
-import java.util.Base64;
+import sun.misc.BASE64Decoder;
 
 
 /**
@@ -21,7 +21,7 @@ public class decodeMessage {
 	public static String aesDecrypt(String content) {
 	    try {
 
-	    	byte[] encrypted1 = Base64.getDecoder().decode(content);
+	    	byte[] encrypted1 = new BASE64Decoder().decodeBuffer(content);
 	       
 	        Cipher cipher = Cipher.getInstance("AES/CBC/NoPadding");
 	        SecretKeySpec keyspec = new SecretKeySpec(content.getBytes(), "AES");
