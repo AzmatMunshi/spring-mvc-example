@@ -3,7 +3,7 @@ package com.wipro.service;
 import java.util.Hashtable;
 
 import javax.sql.DataSource;
-//Initial Context
+//Initial Context, java 
 public class InitialContext {
 	
 	InitialContext(Hashtable env)
