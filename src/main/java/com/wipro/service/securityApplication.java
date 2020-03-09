@@ -16,8 +16,8 @@ public class securityApplication {
 		InitialContext ctx = null;
 		Hashtable env = new Hashtable();
 		env.put(Context.INITIAL_CONTEXT_FACTORY,
-				"org.jboss.naming.remote.client.InitialContextFactory");
-		env.put(Context.PROVIDER_URL, "remote://localhost:4447");
+				"weblogic.jndi.WLInitialContextFactory");
+		env.put(Context.PROVIDER_URL, "t3s://weblogic:7002");
 		env.put(Context.SECURITY_PRINCIPAL, "wipro");
 		env.put(Context.SECURITY_CREDENTIALS, "admin");
 		ctx = new InitialContext(env);
