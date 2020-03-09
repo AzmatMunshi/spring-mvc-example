@@ -1,6 +1,4 @@
+com\wipro\service\securityApplication.class
 com\wipro\controller\HomeController.class
 com\wipro\model\User.class
-com\wipro\service\decodeMessage$1.class
-com\wipro\service\decodeMessage.class
 com\wipro\service\InitialContext.class
-com\wipro\service\securityApplication.class
