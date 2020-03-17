@@ -7,11 +7,6 @@ import javax.crypto.spec.SecretKeySpec;
 
 import java.util.Base64;
 
-/**
- * 
- * @author Wipro
- *
- */
 @SuppressWarnings({ "deprecation" })
 public class decodeMessage {
 
