@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<hts application_id="0" profile_id="0" timestamp="2020-03-02T10:34:02.385">
+<hts application_id="0" profile_id="0" timestamp="2020-03-20T06:55:17.062">
 <package name="com.wipro.service">
 <file name="securityApplication.java">
 <violation beginline="15" endline="15" begincolumn="17" endcolumn="25" rule="Java_Standards" subRule="HashTableUSage" ruleset="Basic Rules" package="com.wipro.service" class="securityApplication" method="getDBConnDetails" falsePositive="N" priority="5">
@@ -8,16 +8,30 @@ Hashtable  usage detected
 <violation beginline="17" endline="17" begincolumn="17" endcolumn="25" rule="Java_Standards" subRule="HashTableUSage" ruleset="Basic Rules" package="com.wipro.service" class="securityApplication" method="getDBConnDetails" falsePositive="N" priority="5">
 Hashtable  usage detected
 </violation>
+<violation beginline="19" endline="19" begincolumn="33" endcolumn="71" rule="WebLogic" subRule="WLInitialContextFactory" ruleset="Basic Rules" package="com.wipro.service" class="securityApplication" method="getDBConnDetails" falsePositive="N" priority="1">
+WLInitialContextFactory
+</violation>
+<violation beginline="19" endline="19" begincolumn="33" endcolumn="71" rule="Java_Standards" subRule="WLSNamingJNDIUsage" ruleset="Basic Rules" package="com.wipro.service" class="securityApplication" method="getDBConnDetails" falsePositive="N" priority="3">
+java Naming weblogic JNDI has to be changed
+</violation>
 <violation beginline="29" endline="29" begincolumn="17" endcolumn="25" rule="Java_Standards" subRule="HashTableUSage" ruleset="Basic Rules" package="com.wipro.service" class="securityApplication" method="sendTheTxnData" falsePositive="N" priority="5">
 Hashtable  usage detected
 </violation>
 </file>
 <file name="decodeMessage.java">
-<violation beginline="26" endline="26" begincolumn="51" endcolumn="71" rule="Java_Standards" subRule="Possible_HardCoded_Path" ruleset="Basic Rules" package="com.wipro.service" class="decodeMessage" method="aesDecrypt" falsePositive="N" priority="3">
+<violation beginline="20" endline="20" begincolumn="51" endcolumn="71" rule="Java_Standards" subRule="Possible_HardCoded_Path" ruleset="Basic Rules" package="com.wipro.service" class="decodeMessage" method="aesDecrypt" falsePositive="N" priority="3">
 Hardcoded file path usage detected 
 </violation>
-<violation beginline="37" endline="37" begincolumn="17" endcolumn="33" rule="Onpremise_to_Cloud" subRule="Catch_StackTrace" ruleset="Basic Rules" package="com.wipro.service" class="decodeMessage" method="aesDecrypt" falsePositive="N" priority="3">
+<violation beginline="31" endline="31" begincolumn="17" endcolumn="33" rule="Onpremise_to_Cloud" subRule="Catch_StackTrace" ruleset="Basic Rules" package="com.wipro.service" class="decodeMessage" method="aesDecrypt" falsePositive="N" priority="3">
 Checking the printStackTrace method
+</violation>
+</file>
+<file name="LookAndFeel.java">
+<violation beginline="6" endline="6" begincolumn="8" endcolumn="55" rule="JDK5_to_JDK8" subRule="SUN_Packages_Detected1" ruleset="Basic Rules" package="com.wipro.service" falsePositive="N" priority="3">
+packages Inaccessible
+</violation>
+<violation beginline="12" endline="12" begincolumn="42" endcolumn="58" rule="JDK5_to_JDK8" subRule="nimbusLookAndFeel_detected1" ruleset="Basic Rules" package="com.wipro.service" class="LookAndFeel" method="messageInput" falsePositive="N" priority="3">
+NimbusLookAndFeel Support Removed
 </violation>
 </file>
 <file name="InitialContext.java">
