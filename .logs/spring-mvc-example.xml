@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<hts application_id="0" profile_id="0" timestamp="2020-03-27T07:21:14.754">
+<hts application_id="0" profile_id="0" timestamp="2020-03-27T07:49:12.109">
 <package name="com.wipro.service">
 <file name="securityApplication.java">
 <violation beginline="15" endline="15" begincolumn="17" endcolumn="25" rule="Java_Standards" subRule="HashTableUSage" ruleset="Basic Rules" package="com.wipro.service" class="securityApplication" method="getDBConnDetails" falsePositive="N" priority="5">
